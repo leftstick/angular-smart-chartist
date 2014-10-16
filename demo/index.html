@@ -1,23 +1,86 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="demo">
-<head>
-    <title>DEMO</title>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
-    <meta name="renderer" content="webkit"/>
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="bower/chartist/libdist/chartist.min.css">
-    <link rel="stylesheet" type="text/css" href="angular-smart-chartist.css">
-    <link rel="stylesheet" type="text/css" href="demo.css">
-</head>
-<body ng-controller="DemoController">
-    
-    <chartist tooltip="tooltipStatus" data="data" class="ct-chart ct-minor-seventh" options="options"></chartist>
-
+    <head>
+        <title>DEMO</title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
+        <meta name="renderer" content="webkit"/>
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <link rel="stylesheet" type="text/css" href="bower/amazeui/dist/css/amazeui.min.css">
+        <link rel="stylesheet" type="text/css" href="bower/chartist/libdist/chartist.min.css">
+        <link rel="stylesheet" type="text/css" href="angular-smart-chartist.css">
+        <link rel="stylesheet" type="text/css" href="demo.css">
+    </head>
+    <body ng-controller="DemoController">
+        <div class="get">
+            <div class="am-g">
+                <div class="col-lg-12">
+                    <h1 class="get-title">angular-smart-chartist</h1>
+                    <p>
+                    an amazing web-component which bring you the functionality from <a class="link glow" href="http://gionkunz.github.io/chartist-js/">chartist</a>
+                    </p>
+                    <p>
+                    <a href="https://github.com/leftstick/angular-smart-chartist" class="am-btn am-btn-sm am-btn-warning wobble-horizontal">Github Source</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="am-g am-container">
+                <div class="col-lg-12">
+                    <h2 class="detail-h2">Be smart, be simple!</h2>
+                    <div class="am-g">
+                        <div class="col-lg-6 col-md-6 col-sm-12 detail-mb">
+                            <h3 class="detail-h3">
+                            <i class="am-icon-mobile am-icon-sm"></i>
+                            Bar
+                            </h3>
+                            <chartist class="ct-chart ct-minor-seventh" type="Bar" data="barData" options="barOpts"></chartist>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 detail-mb">
+                            <h3 class="detail-h3">
+                            <i class="am-icon-cogs am-icon-sm"></i>
+                            Line
+                            </h3>
+                            <chartist tooltip="lineTooltip" class="ct-chart ct-minor-seventh" type="Line" data="lineData"></chartist>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 detail-mb">
+                            <h3 class="detail-h3">
+                            <i class="am-icon-check-square-o am-icon-sm"></i>
+                            Pie
+                            </h3>
+                            <chartist class="ct-chart ct-square cus-pie" type="Pie" data="pieData"></chartist>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 detail-mb">
+                            <h3 class="detail-h3">
+                            <i class="am-icon-send-o am-icon-sm"></i>
+                            轻量级，高性能
+                            </h3>
+                            <p class="detail-p">
+                            Amaze UI 非常注重性能，基于轻量的 Zepto.js 开发，并使用 CSS3 来做动画交互，平滑、高效，更适合移动设备，让你的 Web 应用可以高速载入。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hope">
+            <div class="am-g am-container">
+                <div class="col-lg-8 col-md-6 col-sm-12">
+                    <h2 class="hope-title">Let's make angular more powerful, and easier to use</h2>
+                    <p>
+                    And the world belongs to you
+                    </p>
+                </div>
+            </div>
+        </div>
+    <footer class="footer">
+            <p>&copy; 2014 Licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>. by <a href="http://leftstick.github.io/" target="_blank">Howard.Zuo</a>.</p>
+    </footer>
     <script type="text/javascript" src="bower/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="bower/angular/angular.min.js"></script>
     <script type="text/javascript" src="bower/chartist/libdist/chartist.min.js"></script>
