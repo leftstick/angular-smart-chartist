@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demo">
+<head>
+    <title>DEMO</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="bower/chartist/libdist/chartist.min.css">
+    <link rel="stylesheet" type="text/css" href="angular-smart-chartist.css">
+    <link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+<body ng-controller="DemoController">
+    
+    <chartist tooltip="tooltipStatus" data="data" class="ct-chart ct-minor-seventh" options="options"></chartist>
+
+    <script type="text/javascript" src="bower/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower/chartist/libdist/chartist.min.js"></script>
+    <script type="text/javascript" src="angular-smart-chartist.js"></script>
+    <script type="text/javascript" src="demo.js"></script>
+</body>
+</html>

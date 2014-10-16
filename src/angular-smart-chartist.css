@@ -1,0 +1,20 @@
+.tooltip{
+    position: absolute;
+    display: inline-block;
+    min-width: 90px;
+    padding: 10px;
+    background: #F4C63D;
+    color: #453D3F;
+    font-weight: 700;
+    text-align: center;
+    pointer-events: none;
+    z-index: 1;
+}
+.tooltip-arrow{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #F4C63D;
+}
