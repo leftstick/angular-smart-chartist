@@ -2,6 +2,9 @@
 var demo = angular.module('demo', ['angular-smart-chartist']);
 
 demo.controller('DemoController', function($scope) {
+
+    $scope.showSourceCode = false;
+
     $scope.barData = {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         series: [
@@ -30,6 +33,28 @@ demo.controller('DemoController', function($scope) {
     $scope.pieData = {
         labels: ['Bananas', 'Apples', 'Grapes'],
         series: [20, 15, 40]
+    };
+
+
+
+    $scope.barSource = function() {
+        $scope.showSourceCode = true;
+        $scope.source = 'Bar';
+    };
+
+    $scope.lineSource = function() {
+        $scope.showSourceCode = true;
+        $scope.source = 'Line';
+    };
+
+    $scope.pieSource = function() {
+        $scope.showSourceCode = true;
+        $scope.source = 'Pie';
+    };
+
+    $scope.closeSource = function() {
+        $scope.showSourceCode = false;
+        delete $scope.source;
     };
 
 });

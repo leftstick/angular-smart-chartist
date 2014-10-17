@@ -45,13 +45,23 @@
 
 
                 var enableTooltip = function() {
-                    element.on('mouseenter', '.ct-point', function() {
+
+                    var selector = '.ct-point';
+                    if (type === 'Bar') {
+                        selector = '.ct-bar';
+                    } else if (type === 'Pie') {
+                        selector = '.ct-slice';
+                    }
+                    element.on('mouseenter', selector, function() {
                         var $point = $(this);
                         var $g = $point.parent();
                         var value = $point.attr('ct:value');
                         var labelIndex = $g.find('line').index($point);
                         var seriesName = $point.parent().attr('ct:series-name');
                         var tip = $scope.data.labels[labelIndex] + '<br/>';
+                        if (type === 'Pie') {
+                            tip = $g.find('.ct-label').text() + '<br/>';
+                        }
                         tip += seriesName ? seriesName + ': ' : '';
                         tip += value;
 
@@ -73,7 +83,7 @@
                         });
                     });
 
-                    element.on('mouseleave', '.ct-point', function() {
+                    element.on('mouseleave', selector, function() {
                         var $point = $(this);
 
                         $point.animate({

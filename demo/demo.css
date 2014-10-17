@@ -37,7 +37,7 @@
 }
 
 .cus-pie .ct-label{
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .hope {
@@ -57,6 +57,17 @@
     background: #2d3e50;
 }
 
+.am-modal-actions{
+    display: block;
+}
+.am-dimmer{
+  display: block;
+}
+
+.am-modal-actions-group pre{
+    max-height: 300px;
+    word-wrap: normal;
+}
 
 
 
