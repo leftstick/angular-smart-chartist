@@ -2,5 +2,6 @@
 node_modules/
 
 #bower
+bower/
 demo/bower/
 demo/angular-smart-chartist.js
