@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demo">
+    <head>
+        <title>DEMO</title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
+        <meta name="renderer" content="webkit"/>
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <link rel="stylesheet" href="prism.css">
+        <link rel="stylesheet" type="text/css" href="bower/amazeui/dist/css/amazeui.min.css">
+        <link rel="stylesheet" type="text/css" href="bower/chartist/libdist/chartist.min.css">
+        <link rel="stylesheet" type="text/css" href="angular-smart-chartist.css">
+        <link rel="stylesheet" type="text/css" href="demo.css">
+    </head>
+    <body ng-controller="DemoController" ng-class="{'am-dimmer-active' : showSourceCode}">
+        <div class="get">
+            <div class="am-g">
+                <div class="col-lg-12">
+                    <h1 class="get-title">angular-smart-chartist</h1>
+                    <p>
+                    an amazing web-component which bring you the functionality from <a class="link glow" href="http://gionkunz.github.io/chartist-js/">chartist</a>
+                    </p>
+                    <p>
+                    <a href="https://github.com/leftstick/angular-smart-chartist" class="am-btn am-btn-sm am-btn-warning wobble-horizontal">Github Source</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="am-g am-container">
+                <div class="col-lg-12">
+                    <h2 class="detail-h2">Be smart, be simple!</h2>
+                    <div class="am-g">
+                        <div class="col-lg-6 col-md-6 col-sm-12 detail-mb">
+                            <h3 class="detail-h3">
+                            <i class="am-icon-bar-chart am-icon-sm"></i>
+                            Bar
+                            </h3>
+                            <chartist tooltip="lineTooltip" class="ct-chart ct-minor-seventh" type="Bar" data="barData" options="barOpts"></chartist>
+                            <button ng-click="barSource()" type="button" class="am-btn am-btn-warning am-btn-block" >Source Code</button>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 detail-mb">
+                            <h3 class="detail-h3">
+                            <i class="am-icon-line-chart am-icon-sm"></i>
+                            Line
+                            </h3>
+                            <chartist tooltip="lineTooltip" class="ct-chart ct-minor-seventh" type="Line" data="lineData"></chartist>
+                            <button ng-click="lineSource()" type="button" class="am-btn am-btn-warning am-btn-block" >Source Code</button>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 detail-mb">
+                            <h3 class="detail-h3">
+                            <i class="am-icon-pie-chart am-icon-sm"></i>
+                            Pie
+                            </h3>
+                            <chartist tooltip="lineTooltip" class="ct-chart ct-square cus-pie" type="Pie" data="pieData"></chartist>
+                            <button ng-click="pieSource()" type="button" class="am-btn am-btn-warning am-btn-block" >Source Code</button>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 detail-mb">
+                            <h3 class="detail-h3">
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hope">
+            <div class="am-g am-container">
+                <div class="col-lg-8 col-md-6 col-sm-12">
+                    <h2 class="hope-title">Let's make angular more powerful, and easier to use</h2>
+                    <p>
+                    Try to make it fun
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    <div class="am-modal-actions am-modal-active" ng-show="showSourceCode">
+        <div class="am-modal-actions-group" ng-show="showSourceCode && source === 'Bar'">
+            <ul class="am-list">
+                <li class="am-modal-actions-header">
+                    HTML
+                </li>
+                <li>
+<pre><code class="language-markup">
+&lt;chartist tooltip="lineTooltip" class="ct-chart ct-minor-seventh" type="Line" data="lineData"&gt;&lt;/chartist&gt;
+</code></pre>
+                </li>
+                <li class="am-modal-actions-header">
+                    JavaScript
+                </li>
+                <li>
+<pre><code class="language-javascript">
+'use strict';
+var demo = angular.module('demo', ['angular-smart-chartist']);
+
+demo.controller('DemoController', function($scope) {
+    $scope.barData = {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        series: [
+            [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
+            [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
+        ]
+    };
+
+    $scope.barOpts = {
+        seriesBarDistance: 10
+    };
+
+});
+</code></pre>
+                </li>
+            </ul>
+        </div>
+
+        <div class="am-modal-actions-group" ng-show="showSourceCode && source === 'Line'">
+            <ul class="am-list">
+                <li class="am-modal-actions-header">
+                    HTML
+                </li>
+                <li>
+<pre><code class="language-markup">
+&lt;chartist tooltip="lineTooltip" class="ct-chart ct-minor-seventh" type="Line" data="barData" options="barOpts"&gt;&lt;/chartist&gt;
+</code></pre>
+                </li>
+                <li class="am-modal-actions-header">
+                    JavaScript
+                </li>
+                <li>
+<pre><code class="language-javascript">
+'use strict';
+var demo = angular.module('demo', ['angular-smart-chartist']);
+
+demo.controller('DemoController', function($scope) {
+    $scope.lineTooltip = true;
+    $scope.lineData = {
+        labels: ['1', '2', '3', '4', '5', '6'],
+        series: [{
+            name: 'Fibonacci sequence',
+            data: [1, 2, 3, 5, 8, 13]
+        }, {
+            name: 'Golden section',
+            data: [1, 1.618, 2.618, 4.236, 6.854, 11.09]
+        }]
+    };
+});
+</code></pre>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="am-modal-actions-group" ng-show="showSourceCode && source === 'Pie'">
+            <ul class="am-list">
+                <li class="am-modal-actions-header">
+                    HTML
+                </li>
+                <li>
+<pre><code class="language-markup">
+&lt;chartist tooltip="lineTooltip" class="ct-chart ct-square cus-pie" type="Pie" data="pieData"&gt;&lt;/chartist&gt;
+</code></pre>
+                </li>
+                <li class="am-modal-actions-header">
+                    JavaScript
+                </li>
+                <li>
+<pre><code class="language-javascript">
+'use strict';
+var demo = angular.module('demo', ['angular-smart-chartist']);
+
+demo.controller('DemoController', function($scope) {
+    $scope.pieData = {
+        labels: ['Bananas', 'Apples', 'Grapes'],
+        series: [20, 15, 40]
+    };
+});
+</code></pre>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="am-modal-actions-group">
+            <button ng-click="closeSource()" class="am-btn am-btn-secondary am-btn-block">关闭</button>
+        </div>
+    </div>
+
+    <div class="am-dimmer am-active" ng-show="showSourceCode"></div>
+    <footer class="footer">
+            <p>&copy; 2014 Licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>. by <a href="http://leftstick.github.io/" target="_blank">Howard.Zuo</a>.</p>
+    </footer>
+    <script type="text/javascript" src="prism.js"></script>
+    <script type="text/javascript" src="bower/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower/chartist/libdist/chartist.min.js"></script>
+    <script type="text/javascript" src="angular-smart-chartist.js"></script>
+    <script type="text/javascript" src="demo.js"></script>
+</body>
+</html>
