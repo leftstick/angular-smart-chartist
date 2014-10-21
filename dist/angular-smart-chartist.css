@@ -3,7 +3,7 @@
     display: inline-block;
     min-width: 90px;
     padding: 10px;
-    background: #F4C63D;
+    background: #608BD6;
     color: #453D3F;
     font-weight: 700;
     text-align: center;
@@ -16,5 +16,5 @@
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-top: 15px solid #F4C63D;
+    border-top: 15px solid #608BD6;
 }
