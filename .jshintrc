@@ -9,7 +9,8 @@
         "alert": true,
         "Chartist": true,
         "jQuery": true,
-        "$tooltip": true
+        "$tooltip": true,
+        "module": true
     },
     "globalstrict": true,
     "quotmark": true,

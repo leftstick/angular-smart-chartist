@@ -138,9 +138,9 @@
     };
 
     if (typeof exports === 'object') {
-        definition(require('chartist'));
+        module.exports = definition(require('chartist'));
     } else if (typeof define === 'function' && define.amd) {
-        require(['chartist'], definition);
+        define(['chartist'], definition);
     } else {
         definition(global.Chartist);
     }
