@@ -1,6 +1,6 @@
 {
   "name": "angular-smart-chartist",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "A handy direcitve for chartist, by which developer can build up their application with a beautiful chart in it",
   "repository": {
     "type": "git",

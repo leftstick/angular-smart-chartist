@@ -2,10 +2,10 @@
  *
  *  Usage:
  *
- *       <chartist tooltip="status" data="data" class="ct-chart ct-minor-seventh" options="options"></chartist>
+ *       <chartist asc-tooltip="status" data="data" class="ct-chart ct-minor-seventh" options="options"></chartist>
  *
  *  @author Howard.Zuo
- *  @date Oct 16, 2014
+ *  @date Feb 21, 2015
  *
  **/
 (function(global, angular, $) {
@@ -20,7 +20,7 @@
                 restrict: 'AE',
                 scope: {
                     type: '@',
-                    tooltip: '=',
+                    ascTooltip: '=',
                     data: '=',
                     options: '=',
                     responsiveOptions: '='
@@ -116,7 +116,7 @@
                         chart = Chartist[type](element[0], $scope.data, $scope.options, $scope.responsiveOptions);
                     };
 
-                    $scope.$watch('tooltip', function(newValue) {
+                    $scope.$watch('ascTooltip', function(newValue) {
                         if (newValue) {
                             enableTooltip();
                         } else {
