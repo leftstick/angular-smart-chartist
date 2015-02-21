@@ -41,7 +41,7 @@ bower install angular-smart-chartist --save
 ## Usage ##
 
 ```html
-<chartist tooltip="lineTooltip" class="ct-chart ct-minor-seventh" type="Bar" data="barData" options="barOpts"></chartist>
+<chartist asc-tooltip="lineTooltip" class="ct-chart ct-minor-seventh" type="Bar" data="barData" options="barOpts"></chartist>
 ```
 
 ```javascript
@@ -69,7 +69,7 @@ demo.controller('DemoController', function($scope) {
 
 | Attribute        | Type           | Required  | Description |
 | :------------- |:-------------| :-----:| :-----|
-| tooltip | boolean([expression]) | No | evaluaed as true to display the tooltip |
+| ascTooltip | boolean([expression]) | No | evaluaed as true to display the tooltip |
 | class | string | No | Check the [chartist][chartist-url]'s doc: [Show available aspect ratios][css-url] |
 | type | string | No | Chart method, `Bar`, `Line`, `Pie` are available. `Line` by default |
 | data | object([expression]) | Yes | Check the [chartist][chartist-url]'s doc: [API][[api-url]] |
