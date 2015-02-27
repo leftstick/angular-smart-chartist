@@ -93,9 +93,17 @@
                         });
 
                         element.on('mousemove', function(event) {
+
+                            if(typeof event.offsetX === 'undefined'){
+                                //the workaround here cause FF doesn't have offsetX/Y attribute
+                                event.offsetX = event.originalEvent.layerX;
+                                event.offsetY = event.originalEvent.layerY;
+                            }
+                            var left = event.offsetX - $toolTip.width() / 2 - 8;
+                            var top = event.offsetY - $toolTip.height() - 40;
                             $toolTip.css({
-                                left: event.offsetX - $toolTip.width() / 2 - 8,
-                                top: event.offsetY - $toolTip.height() - 40
+                                left: left,
+                                top: top
                             });
                         });
                     };
