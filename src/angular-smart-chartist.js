@@ -5,7 +5,7 @@
  *       <chartist asc-tooltip="status" data="data" class="ct-chart ct-minor-seventh" options="options"></chartist>
  *
  *  @author Howard.Zuo
- *  @date Feb 21, 2015
+ *  @date Feb 27, 2015
  *
  **/
 (function(global, angular, $) {

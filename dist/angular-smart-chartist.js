@@ -5,7 +5,7 @@
  *       <chartist asc-tooltip="status" data="data" class="ct-chart ct-minor-seventh" options="options"></chartist>
  *
  *  @author Howard.Zuo
- *  @date Feb 21, 2015
+ *  @date Feb 27, 2015
  *
  **/
 (function(global, angular, $) {
@@ -93,9 +93,17 @@
                         });
 
                         element.on('mousemove', function(event) {
+
+                            if(typeof event.offsetX === 'undefined'){
+                                //the workaround here cause FF doesn't have offsetX/Y attribute
+                                event.offsetX = event.originalEvent.layerX;
+                                event.offsetY = event.originalEvent.layerY;
+                            }
+                            var left = event.offsetX - $toolTip.width() / 2 - 8;
+                            var top = event.offsetY - $toolTip.height() - 40;
                             $toolTip.css({
-                                left: event.offsetX - $toolTip.width() / 2 - 8,
-                                top: event.offsetY - $toolTip.height() - 40
+                                left: left,
+                                top: top
                             });
                         });
                     };
