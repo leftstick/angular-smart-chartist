@@ -23,6 +23,7 @@ bower/angular/angular.min.js.gzip
 bower/angular/bower.json
 bower/angular/package.json
 bower/angular/README.md
+bower/angular/index.js
 
 bower/chartist/.bower.json
 bower/chartist/bower.json
@@ -37,3 +38,5 @@ bower/jquery/src/
 bower/jquery/.bower.json
 bower/jquery/bower.json
 bower/jquery/MIT-LICENSE.txt
+
+demo/
