@@ -1,4 +1,4 @@
-# angular-smart-chartist ![](http://img.shields.io/badge/bower_module-v1.3.3-green.svg) #
+# angular-smart-chartist ![](http://img.shields.io/badge/bower_module-v1.3.4-green.svg) #
 ======================
 
 A handy direcitve for chartist, by which developer can build up their application with a beautiful chart in it
